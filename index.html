@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<HTML>
+	<HEAD>
+        <link rel="stylesheet" href="basic.css">
+        <script src="sortJSON.js"></script>
+        <script type="text/javascript">
+          function doTheSort() {
+            console.log("Sorting JSON recursively...")
+            jsonSource = JSON.parse(document.getElementById("jsonSource").value)
+            console.log("output : "+JSON.stringify(sortJSON(jsonSource),null,2))
+            document.getElementById("jsonOutput").value=JSON.stringify(sortJSON(jsonSource),null,2)
+        }        
+        </script>
+	</HEAD>
+	<BODY>
+		<h2>This App will sort a JSON recursively</h2>
+		<br>
+		<label for="jsonSource">JSON Source:</label>
+        <br>
+        <textarea id="jsonSource" name="jsonSource" rows="20" cols="80">
+    {
+	  "a": "100",
+    "e": "200",
+    "m": "0",
+    "q": {
+    	"a": "0",
+        "z": "1",
+    	"m": "2" 
+    },
+    "g" : [
+      "b","a","c"
+    ],
+    "l" : {
+      "y": {
+        "b": 1,
+        "a": 2
+      },
+      "x": {
+        "b": 1,
+        "a": 2
+      }      
+    }
+
+}
+        </textarea>
+        <br>
+        <button id="sort" onClick="doTheSort();">Sort</button>
+		<br>
+		<label for="jsonOutput">JSON Output:</label>
+        <br>
+        <textarea id="jsonOutput" name="jsonOutput" rows="20" cols="80">...
+        </textarea>
+        <br>
+
+	</BODY>
+</HTML>

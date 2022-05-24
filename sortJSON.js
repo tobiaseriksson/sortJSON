@@ -1,6 +1,3 @@
-
-console.log("Sorting JSON recursively...")
-
 function isAllElementsOfArrayScalars(arr) {
   if( ! (arr instanceof Array) ) {
     return arr
@@ -40,30 +37,3 @@ function sortJSON(object) {
 	}
 	return newObject;
 }
-
-js1 = {
-	  "a": "100",
-    "e": "200",
-    "m": "0",
-    "q": {
-    	"a": "0",
-        "z": "1",
-    	"m": "2" 
-    },
-    "g" : [
-      "b","a","c"
-    ],
-    "l" : {
-      "y": {
-        "b": 1,
-        "a": 2
-      },
-      "x": {
-        "b": 1,
-        "a": 2
-      }      
-    }
-
-}
-
-console.log("output : "+JSON.stringify(sortJSON(js1),null,2))
